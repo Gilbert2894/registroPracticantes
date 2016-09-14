@@ -1,0 +1,31 @@
+#imagen{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#img_destino {
+    margin: auto;  
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #ccc;
+    box-shadow: .25em .25em 0 #ccc;
+}
+.marco {
+    margin: 5px 5px 5px 5px;  
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.imgMini {
+    margin: auto;  
+    width: 80px;
+    height: 60px;
+}  
+
+.img_destinoModificar {
+    margin: auto;  
+    max-width: 250px;
+    max-height: 200px;
+    border: 1px solid #ccc;
+    box-shadow: .25em .25em 0 #ccc;
+}
+ 
