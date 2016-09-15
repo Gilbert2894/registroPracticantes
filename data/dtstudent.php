@@ -4,17 +4,17 @@ class dtstudent{
 	function dtstudent(){
 	}
 
-	function insertar($micompany){
+	function insertar($miStudent){
 		$con = new dtConexion;
 		if($con->conectar()==true){
 			$query = "INSERT INTO student(carnet, nameStu, lnameStu, cedula, carrera, phone, dob)
-					VALUES (".$micompany->getcarnet().",
-						'".$micompany->getnameStu()."',
-						'".$micompany->getlnameStu()."',
-						'".$micompany->getcedula()."',
-						'".$micompany->getcarrera()."', 
-						'".$micompany->getphone()."',
-						'".$micompany->getdob()."')";
+					VALUES (".$miStudent->getcarnet().",
+						'".$miStudent->getnameStu()."',
+						'".$miStudent->getlnameStu()."',
+						'".$miStudent->getcedula()."',
+						'".$miStudent->getcarrera()."', 
+						'".$miStudent->getphone()."',
+						'".$miStudent->getdob()."')";
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){
@@ -37,8 +37,8 @@ class dtstudent{
 			//echo "$query";
 			while($row = mysql_fetch_array($result)){
 
-	 			$micompany = new student( $row[0], $row[1], $row[2] , $row[3], $row[4], $row[5], $row[6]);	
-				array_push($lista, $micompany);
+	 			$miStudent = new student( $row[0], $row[1], $row[2] , $row[3], $row[4], $row[5], $row[6]);	
+				array_push($lista, $miStudent);
 			}
 			if (!$lista){
 				return false;
@@ -75,31 +75,31 @@ class dtstudent{
 			$result = @mysql_query($query);
 
 			if($row = mysql_fetch_array($result)){
-	 			$micompany = new student( $row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]);
+	 			$miStudent = new student( $row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]);
 
 			}
-			if (!$micompany){
+			if (!$miStudent){
 				return false;
 			}else{
-				return $micompany;
+				return $miStudent;
 			}
 		}
 	}
 
-	function modificar($micompany){
+	function modificar($miStudent){
 		$con = new dtConexion;
 		if($con->conectar()==true){
 			$query = "UPDATE student SET
-			nameStu = '".$micompany->getnameStu()."',
-			lnameStu='".$micompany->getlnameStu()."'
-			cedula='".$micompany->getcedula()."',
-			carrera='".$micompany->getcarrera()."',
-			phone='".$micompany->getphone()."',
-			dob='".$micompany->getdob()."'
-			WHERE carnet = ".$micompany->getcarnet()."";
+			nameStu = '".$miStudent->getnameStu()."',
+			lnameStu='".$miStudent->getlnameStu()."'
+			cedula='".$miStudent->getcedula()."',
+			carrera='".$miStudent->getcarrera()."',
+			phone='".$miStudent->getphone()."',
+			dob='".$miStudent->getdob()."'
+			WHERE carnet = ".$miStudent->getcarnet()."";
 				//echo "$query";
 			$result = @mysql_query($query);
-			if (!$micompany){
+			if (!$miStudent){
 				return false;
 			}else{
 				return true;

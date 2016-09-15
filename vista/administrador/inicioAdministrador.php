@@ -111,5 +111,10 @@
         
         <script src="../../assets/global/scripts/app.min.js" type="text/javascript"></script>
         <script src="../../assets/pages/scripts/login-4.min.js" type="text/javascript"></script>
+		
+		<?php
+            echo sha1("admin");
+
+        ?>
 	</body>
 </html>
