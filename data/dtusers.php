@@ -4,9 +4,10 @@ class dtusers{
 	function dtusers(){
 	}
 
-	function insertar($micompany){
+	function insertar($user){
 		$con = new dtConexion;
 		if($con->conectar()==true){
+
 			$query = "CALL sp_insertarUsers('".$micompany->getusername()."',
 						'".$micompany->getpassword()."',
 						'".$micompany->getfname()."',
@@ -14,6 +15,7 @@ class dtusers{
 						'".$micompany->getphone()."',
 						'".$micompany->getcellphone()."',
 						'".$micompany->getemail()."')";
+
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){

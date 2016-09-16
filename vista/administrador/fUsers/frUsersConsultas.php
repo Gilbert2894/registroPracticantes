@@ -5,10 +5,17 @@
 	$control = new controlObtenerUsers;
 	$lista =$control->obtenerUserss();
 ?>
-<div class="container">
-	<h1>Usuarios</h1>
+<div class="row">
+    <div class="col-md-12">
+    	<div class="portlet light bordered">
+    		<div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold uppercase"> Usuarios</span>
+                </div>
+            </div>
 <div class="table-responsive">
-	<table class="table table-bordered table table-hover">
+	<table class="table table-striped table-bordered table-hover table-checkable order-column">
 		<tr>		
 			<th><p>id</p></th>		
 			<th><p>nombre</p></th>		
@@ -22,7 +29,7 @@
 		</tr>
 		<?php 
 			if (!$lista) {
-				echo "No hay empresas registrada";
+				echo "No hay usuarios registrados";
 			} else {
 				foreach ($lista as $users){
 					echo "<tr>";
@@ -52,5 +59,6 @@
 	</table>
 	</div>		
 </div>	
-
+</div>	
+</div>	
 		

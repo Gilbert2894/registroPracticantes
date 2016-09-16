@@ -72,7 +72,7 @@
     <div class="clearfix"> </div>
     <div class="container">
     <div class="page-container">
-      <div class="page-sidebar-wrapper">
+      <div class="page-sidebar-wrapper col-md-3">
                 <div class="page-sidebar navbar-collapse collapse">
                     <ul class="page-sidebar-menu  page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                         <li class="heading">
@@ -173,11 +173,13 @@
 
                     <!-- END SIDEBAR MENU -->
                 </div>
-                <div id="contenedorLista"></div>
-                <div id="contenedorFormulario"></div>
+
+                
                 
                 <!-- END SIDEBAR -->
             </div>
+            <div id="contenedorFormulario"></div>
+            <div  class="col-md-9"align="right" id="contenedorLista"></div>
 
     </div>
     <div class="page-footer">
