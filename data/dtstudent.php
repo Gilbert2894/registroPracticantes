@@ -15,7 +15,7 @@ class dtstudent{
 						'".$miStudent->getphone()."',
 						'".$miStudent->getdob()."')";
 
-			
+			print_r($query);
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){
