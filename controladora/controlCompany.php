@@ -18,15 +18,15 @@
 			$phoneCom= $_POST['phoneCom'];
 			$emailCom= $_POST['emailCom'];
 			
-			$company = new company($nameCom, $addressCom, $phoneCom, $emailCom);			
+			$company = new company(0,$nameCom, $addressCom, $phoneCom, $emailCom);			
 			
 			
 			$dtcompany = new dtcompany;
 			
 			if($dtcompany->insertar($company)==true){	
-				echo "<div class='alert alert-success' role='alert'>Registro grabado correctamente</div>";	
+				echo "true";	
 			}else{
-				echo "</p>Error al guardar ".$idCom."</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -45,9 +45,9 @@
 			$dtcompany = new dtcompany;
 			
 			if($dtcompany->modificar($company)==true){		
-				echo "Registro modificado correctamente<br>";
+				echo "true";
 			}else{
-				echo "</p>Error al modificar</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -57,9 +57,9 @@
 			$dtcompany = new dtcompany;
 			
 			if($dtcompany->eliminar($idCom)==true){		
-				echo "<div class='alert alert-success' role='alert'>Registro elimado correctamente</div>";
+				echo "true";
 			}else{
-				echo "</p>Error al eliminar</p><br>";
+				echo "false";
 			}
 		}
 	}

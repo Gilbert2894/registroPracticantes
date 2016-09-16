@@ -49,7 +49,14 @@
 		contentType : false,
 		processData : false
 		}).done(function(data) {
-			$("#contenedorMensaje").html(data);
+			if (data=="true") {
+                bootbox.alert("Registro guardado correctamente");
+            }else{
+
+                bootbox.alert("Error al guardar");
+            }
+
+            
 		});     	
 	}
 
@@ -101,7 +108,12 @@ function modificarCompany(){
     contentType : false,
     processData : false
     }).done(function(data) {
-        $("#contenedorMensaje").html(data);
+        if (data=="true") {
+                bootbox.alert("Registro modificado correctamente");
+            }else{
+
+                bootbox.alert("Error al modificar");
+            }
         consultarCompanys();
     });    
 }
@@ -122,6 +134,12 @@ function eliminarCompany(idCom){
         {               
             $('#contenedorMensaje').html(data);
             $('#contenedorFormulario').html("");
+            if (data=="true") {
+                bootbox.alert("Se elimino correctament");
+            }else{
+
+                bootbox.alert("Error al eliminar");
+            }
             consultarCompanys();
         });
     }

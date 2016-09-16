@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
+
 class dtusers{
 	function dtusers(){
 	}
@@ -8,13 +9,14 @@ class dtusers{
 		$con = new dtConexion;
 		if($con->conectar()==true){
 
-			$query = "CALL sp_insertarUsers('".$micompany->getusername()."',
-						'".$micompany->getpassword()."',
-						'".$micompany->getfname()."',
-						'".$micompany->getlname()."', 
-						'".$micompany->getphone()."',
-						'".$micompany->getcellphone()."',
-						'".$micompany->getemail()."')";
+			$query = "CALL sp_insertarUsers('".$user->getusername()."',
+						'".$user->getpassword()."',
+						'".$user->getfname()."',
+						'".$user->getlname()."', 
+						'".$user->getphone()."',
+						'".$user->getcellphone()."',
+						'".$user->getemail()."')";
+
 
 			$result = @mysql_query($query);
 			//echo "$query";

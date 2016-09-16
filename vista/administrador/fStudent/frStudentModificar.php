@@ -16,7 +16,6 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 <div class="container">
 
         <div class="row">
-  <div class="col-md-4"></div>
   <div class="col-md-4">
 
   	<div class="panel panel-default panel panel-mio">
@@ -27,22 +26,22 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 
       <form class="form-inline" id="frStudentModificar" method="POST">
         
-		<p> <label for="">Nombre Estudiante: </label>
+		<p> <label for="">Nombre: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="nameStu" name="nameStu"
 			value=<?php echo "\"".$student->getnameStu()."\"";?>/> </p>
 		
-		<p> <label for="">Apellido Estudiante: </label>
+		<p> <label for="">Apellido: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="lnameStu" name="lnameStu"
 			value=<?php echo "\"".$student->getlnameStu()."\"";?>/> </p>
 
-		<p> <label for="">cedula: </label>
+		<p> <label for="">Cedula: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="cedula" name="cedula"
 			value=<?php echo "\"".$student->getcedula()."\"";?>/> </p>
 
-		<p> <label for="">carrera: </label>
+		<p> <label for="">Carrera: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="carrera" name="carrera"
 			value=<?php echo "\"".$student->getcarrera()."\"";?>/> </p>
@@ -52,7 +51,7 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 		<input class="form-control" class="form-control" type="text" id="phone" name="phone"
 			value=<?php echo "\"".$student->getphone()."\"";?>/> </p>
 
-		<p> <label for="">dob: </label>
+		<p> <label for="">Fecha Nacimiento: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="dob" name="dob"
 			value=<?php echo "\"".$student->getdob()."\"";?>/> </p>

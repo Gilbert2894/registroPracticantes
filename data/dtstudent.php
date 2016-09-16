@@ -90,6 +90,7 @@ class dtstudent{
 	function modificar($miStudent){
 		$con = new dtConexion;
 		if($con->conectar()==true){
+
 			$query = "CALL sp_modificarStudent(".$miStudent->getcarnet().",
 						'".$miStudent->getnameStu()."',
 						'".$miStudent->getlnameStu()."',
@@ -97,6 +98,7 @@ class dtstudent{
 						'".$miStudent->getcarrera()."', 
 						'".$miStudent->getphone()."',
 						'".$miStudent->getdob()."')";
+
 				//echo "$query";
 			$result = @mysql_query($query);
 			if (!$miStudent){

@@ -15,8 +15,7 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 
 <div class="container">
 
-        <div class="row">
-  <div class="col-md-4"></div>
+  <div class="row">
   <div class="col-md-4">
 
   	<div class="panel panel-default panel panel-mio">
@@ -27,22 +26,22 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 
       <form class="form-inline" id="frUsersModificar" method="POST">
         
-		<p> <label for="">Nombre users: </label>
+		<p> <label for="">Nombre: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="username" name="username"
 			value=<?php echo "\"".$users->getusername()."\"";?>/> </p>
 		
-		<p> <label for="">contraseña: </label>
+		<p> <label for="">Contraseña: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="password" name="password"
 			value=""/> </p>
 
-		<p> <label for="">fname: </label>
+		<p> <label for="">Nombre: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="fname" name="fname"
 			value=<?php echo "\"".$users->getfname()."\"";?>/> </p>
 
-		<p> <label for="">lname: </label>
+		<p> <label for="">Apellido: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="lname" name="lname"
 			value=<?php echo "\"".$users->getlname()."\"";?>/> </p>
@@ -52,12 +51,12 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 		<input class="form-control" class="form-control" type="text" id="phone" name="phone"
 			value=<?php echo "\"".$users->getphone()."\"";?>/> </p>
 
-		<p> <label for="">celular: </label>
+		<p> <label for="">Celular: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="cellphone" name="cellphone"
 			value=<?php echo "\"".$users->getcellphone()."\"";?>/> </p>
 
-		<p> <label for="">email: </label>
+		<p> <label for="">Email: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="email" name="email"
 			value=<?php echo "\"".$users->getemail()."\"";?>/> </p>
