@@ -12,22 +12,14 @@
                 rules: {
                     id: "required",
                     username: "required",
-                    password: "required",
-                    fname: "required",
-                    lname: "required",
-                    phone: "required",
-                    cellphone: "required",
+                    n_cel: "required",
                     email: "required"
                 }, 
                 messages: {
 
                      id: "Obligatorio",
                     username: "Obligatorio",
-                    password: "Obligatorio",
-                    fname: "Obligatorio",
-                    lname: "Obligatorio",
-                    phone: "Obligatorio",
-                    cellphone: "Obligatorio",
+                    n_cel: "Obligatorio",
                     email: "Obligatorio"
                 }, 
                 submitHandler: function(form) {                 
@@ -54,7 +46,12 @@
 		contentType : false,
 		processData : false
 		}).done(function(data) {
-			$("#contenedorMensaje").html(data);
+			if (data=="true") {
+                bootbox.alert("Registro guardado correctamente");
+            }else{
+
+                bootbox.alert("Error al guardar");
+            }
 		});     	
 	}
 
@@ -112,7 +109,12 @@ function modificarUsers(){
     contentType : false,
     processData : false
     }).done(function(data) {
-        $("#contenedorMensaje").html(data);
+        if (data=="true") {
+                bootbox.alert("Registro modificado correctamente");
+            }else{
+
+                bootbox.alert("Error al modificar");
+            }
         consultarUserss();
     });    
 }
@@ -133,6 +135,12 @@ function eliminarUsers(id){
         {               
             $('#contenedorMensaje').html(data);
             $('#contenedorFormulario').html("");
+            if (data=="true") {
+                bootbox.alert("Se elimino correctament");
+            }else{
+
+                bootbox.alert("Error al eliminar");
+            }
             consultarUserss();
         });
     }

@@ -23,9 +23,9 @@
 			$dtcompany_student = new dtcompany_student;
 			
 			if($dtcompany_student->insertar($company_student)==true){	
-				echo "<div class='alert alert-success' role='alert'>Registro grabado correctamente</div>";	
+				echo "true";	
 			}else{
-				echo "</p>Error al guardar ".$id."</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -43,9 +43,9 @@
 			$dtcompany_student = new dtcompany_student;
 			
 			if($dtcompany_student->modificar($company_student)==true){		
-				echo "Registro modificado correctamente<br>";
+				echo "true";	
 			}else{
-				echo "</p>Error al modificar</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -55,9 +55,9 @@
 			$dtcompany_student = new dtcompany_student;
 			
 			if($dtcompany_student->eliminar($id)==true){		
-				echo "<div class='alert alert-success' role='alert'>Registro elimado correctamente</div>";
+				echo "true";	
 			}else{
-				echo "</p>Error al eliminar</p><br>";
+				echo "false";
 			}
 		}
 	}

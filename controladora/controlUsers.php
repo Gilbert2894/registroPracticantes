@@ -25,9 +25,9 @@
 			$dtusers = new dtusers;
 			
 			if($dtusers->insertar($users)==true){	
-				echo "<div class='alert alert-success' role='alert'>Registro grabado correctamente</div>";	
+				echo "true";	
 			}else{
-				echo "</p>Error al guardar ".$username."</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -50,9 +50,9 @@
 			$dtusers = new dtusers;
 			
 			if($dtusers->modificar($users)==true){		
-				echo "Registro modificado correctamente<br>";
+				echo "true";	
 			}else{
-				echo "</p>Error al modificar</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -62,9 +62,9 @@
 			$dtusers = new dtusers;
 			
 			if($dtusers->eliminar($id)==true){		
-				echo "<div class='alert alert-success' role='alert'>Registro elimado correctamente</div>";
+				echo "true";	
 			}else{
-				echo "</p>Error al eliminar</p><br>";
+				echo "false";
 			}
 		}
 	}

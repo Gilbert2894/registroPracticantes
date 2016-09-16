@@ -25,9 +25,9 @@
 			$dtstudent = new dtstudent;
 			
 			if($dtstudent->insertar($student)==true){	
-				echo "<div class='alert alert-success' role='alert'>Registro grabado correctamente</div>";	
+					echo "true";	
 			}else{
-				echo "</p>Error al guardar ".$carnet."</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -45,9 +45,9 @@
 			$dtstudent = new dtstudent;
 			
 			if($dtstudent->modificar($student)==true){		
-				echo "Registro modificado correctamente<br>";
+				echo "true";	
 			}else{
-				echo "</p>Error al modificar</p><br>";
+				echo "false";
 			}
 		}
 		
@@ -57,9 +57,9 @@
 			$dtstudent = new dtstudent;
 			
 			if($dtstudent->eliminar($carnet)==true){		
-				echo "<div class='alert alert-success' role='alert'>Registro elimado correctamente</div>";
+				echo "true";	
 			}else{
-				echo "</p>Error al eliminar</p><br>";
+				echo "false";
 			}
 		}
 	}

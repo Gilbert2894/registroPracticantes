@@ -52,7 +52,12 @@
 		contentType : false,
 		processData : false
 		}).done(function(data) {
-			$("#contenedorMensaje").html(data);
+			if (data=="true") {
+                bootbox.alert("Registro guardado correctamente");
+            }else{
+
+                bootbox.alert("Error al guardar");
+            }
 		});     	
 	}
 
@@ -108,7 +113,12 @@ function modificarStudent(){
     contentType : false,
     processData : false
     }).done(function(data) {
-        $("#contenedorMensaje").html(data);
+        if (data=="true") {
+                bootbox.alert("Registro modificado correctamente");
+            }else{
+
+                bootbox.alert("Error al modificar");
+            }
         consultarStudents();
     });    
 }
@@ -129,6 +139,12 @@ function eliminarStudent(carnet){
         {               
             $('#contenedorMensaje').html(data);
             $('#contenedorFormulario').html("");
+            if (data=="true") {
+                bootbox.alert("Se elimino correctament");
+            }else{
+
+                bootbox.alert("Error al eliminar");
+            }
             consultarStudents();
         });
     }

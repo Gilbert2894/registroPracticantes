@@ -3,6 +3,7 @@
     if(! isset ($_SESSION['idUsuario'])){
         header("location:inicioAdministrador.php");
     }
+    $user=$_SESSION['idUsuario'];
 ?>
 <!doctype html>
 <html>
@@ -54,9 +55,10 @@
                         
                         <li class="dropdown dropdown-user dropdown-dark">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <span class="username username-hide-on-mobile"> Perfil </span>
+                                <span class="username username-hide-on-mobile" id="myspan"> Perfil </span>
+                                <input type="hidden" value=<?php echo $user;?> id="user">
                                 <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
-                                <img alt="" class="img-circle" src="../../assets/layouts/layout4/img/avatar9.jpg" /> </a>
+                                <img alt="" class="img-circle" src="../../assets/layouts/layout4/img/avatar.png" /> </a>
                             <ul class="dropdown-menu dropdown-menu-default">
                                 <li>
                                     <a href="../../controladora/controlSalir.php">
@@ -119,7 +121,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="./fCompany_student/frCompany_studentConsultas.php" class="nav-link ">
+                                    <a onclick="cargarFormulario('./fCompany_student/frCompany_studentConsultas.php')" class="nav-link ">
                                         <i class="glyphicon glyphicon-file"></i>
                                         <span class="title">Consultar</span>
                                     </a>
@@ -208,6 +210,9 @@
         <script src="../../assets/global/scripts/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="../../assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+        
+        <script src="../../assets/pages/scripts/ui-bootbox.min.js" type="text/javascript"></script>
         <script src="../../assets/pages/scripts/jquery.validate.min.js" type="text/javascript"></script>
         
         <script src="../../assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>

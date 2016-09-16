@@ -43,7 +43,12 @@
 		contentType : false,
 		processData : false
 		}).done(function(data) {
-			$("#contenedorMensaje").html(data);
+            if (data=="true") {
+                bootbox.alert("Registro guardado correctamente");
+            }else{
+
+                bootbox.alert("Error al guardar");
+            }
 		});     	
 	}
 
@@ -93,7 +98,12 @@ function modificarCompany_student(){
     contentType : false,
     processData : false
     }).done(function(data) {
-        $("#contenedorMensaje").html(data);
+        if (data=="true") {
+                bootbox.alert("Registro modificado correctamente");
+            }else{
+
+                bootbox.alert("Error al modificar");
+            }
         consultarCompany_students();
     });    
 }
@@ -114,6 +124,12 @@ function eliminarCompany_student(id){
         {               
             $('#contenedorMensaje').html(data);
             $('#contenedorFormulario').html("");
+            if (data=="true") {
+                bootbox.alert("Se elimino correctament");
+            }else{
+
+                bootbox.alert("Error al eliminar");
+            }
             consultarCompany_students();
         });
     }
