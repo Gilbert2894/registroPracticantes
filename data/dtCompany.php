@@ -7,9 +7,8 @@ class dtCompany{
 	function insertar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "INSERT INTO company(idCom, nameCom, addressCom, phoneCom, emailCom)
-					VALUES (".$micompany->getidCom().",
-						'".$micompany->getnameCom()."',
+			$query = "INSERT INTO company(nameCom, addressCom, phoneCom, emailCom)
+					VALUES ('".$micompany->getnameCom()."',
 						'".$micompany->getaddressCom()."',
 						'".$micompany->getphoneCom()."',
 							'".$micompany->getemailCom()."' )";

@@ -13,13 +13,12 @@
 		
 			
 			
-			$idCom= $_POST['idCom'];
 			$nameCom= $_POST['nameCom'];
 			$addressCom= $_POST['addressCom'];
 			$phoneCom= $_POST['phoneCom'];
 			$emailCom= $_POST['emailCom'];
 			
-			$company = new company($idCom, $nameCom, $addressCom, $phoneCom, $emailCom);			
+			$company = new company($nameCom, $addressCom, $phoneCom, $emailCom);			
 			
 			
 			$dtcompany = new dtcompany;

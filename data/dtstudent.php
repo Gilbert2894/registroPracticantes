@@ -15,6 +15,8 @@ class dtstudent{
 						'".$miStudent->getcarrera()."', 
 						'".$miStudent->getphone()."',
 						'".$miStudent->getdob()."')";
+
+			
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){

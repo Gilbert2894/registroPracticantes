@@ -7,9 +7,8 @@ class dtusers{
 	function insertar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "INSERT INTO users(id, username, password, fname, lname, phone, cellphone, email)
-					VALUES (".$micompany->getid().",
-						'".$micompany->getusername()."',
+			$query = "INSERT INTO users(username, password, fname, lname, phone, cellphone, email)
+					VALUES ('".$micompany->getusername()."',
 						'".$micompany->getpassword()."',
 						'".$micompany->getfname()."',
 						'".$micompany->getlname()."', 
@@ -38,7 +37,7 @@ class dtusers{
 			//echo "$query";
 			while($row = mysql_fetch_array($result)){
 
-	 			$micompany = new users( $row[0], $row[1], $row[2] , $row[3], $row[4], $row[5], $row[6], $row[7]);	
+	 			$micompany = new users( $row[0], $row[1] , $row[3], $row[4], $row[5], $row[6], $row[7]);	
 				array_push($lista, $micompany);
 			}
 			if (!$lista){
@@ -76,7 +75,7 @@ class dtusers{
 			$result = @mysql_query($query);
 
 			if($row = mysql_fetch_array($result)){
-	 			$micompany = new users( $row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7]);
+	 			$micompany = new users( $row[0], $row[1],$row[2], $row[3], $row[4], $row[5], $row[6], $row[7]);
 
 			}
 			if (!$micompany){

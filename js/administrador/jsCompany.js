@@ -8,9 +8,9 @@
     JQUERY4U.UTIL ={
         setupFormValidation: function()
         {
+
             $("#frCompanyInsertar").validate({
                 rules: {
-                    idCom: "required",
                     nameCom: "required",
                     addressCom: "required",
                     phoneCom: "required",
@@ -18,13 +18,13 @@
                 }, 
                 messages: {
 
-                     idCom: "Obligatorio",
                     nameCom: "Obligatorio",
                     addressCom: "Obligatorio",
                     phoneCom: "Obligatorio",
                     emailCom: "Obligatorio"
                 }, 
-                submitHandler: function(form) {                 
+                submitHandler: function(form) {   
+                                 
                     insertarCompany();
                 }
             });
@@ -37,6 +37,7 @@
 } ) (jQuery, window, document);
 
 	function insertarCompany(){
+
 		var formData = new FormData(document.getElementById("frCompanyInsertar"));        
 		formData.append("accion", "insertar");
 		$.ajax({

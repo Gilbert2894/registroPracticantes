@@ -16,21 +16,16 @@
 	    <h1 class="panel-title">Ingresar Empresa</h1>
 	  </div>
 	  <div class="panel-body">
-
-
-         <p> <label for="">Código Empresa: </label>
-         	<br/>
-		<input type="text" class="form-control" id="idCom" name="idCom" placeholder="AR-001" />	</p>
         
-        <p> <label for="">Nombre Empresa: </label>
+        <p> <label for="">Nombre: </label>
 			<br/>
 		<input type="text" class="form-control" id="nameCom" name="nameCom" placeholder="" />	</p>
 		
-		<p> <label for="">Dirección Empresa: </label>
+		<p> <label for="">Dirección: </label>
 			<br/>
 		<input type="text" class="form-control" id="addressCom" name="addressCom" placeholder="" />	</p>
 		
-		<p> <label for="">telefono Empresa: </label>
+		<p> <label for="">Telefono: </label>
 			<br/>
 		<input type="text" class="form-control" id="phoneCom" name="phoneCom" placeholder=""/></p>
 
