@@ -7,8 +7,7 @@ class dtCompany{
 	function insertar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "CALL sp_insertarCompany(".$micompany->getidCom().",
-						'".$micompany->getnameCom()."',
+			$query = "CALL sp_insertarCompany ('".$micompany->getnameCom()."',
 						'".$micompany->getaddressCom()."',
 						'".$micompany->getphoneCom()."',
 							'".$micompany->getemailCom()."')";
@@ -29,7 +28,7 @@ class dtCompany{
 
 		if($con->conectar()==true){
 
-			$query = "SELECT * FROM company";
+			$query = "CALL sp_consultasCompany()";
 			$result = @mysql_query($query);
 			//echo "$query";
 			while($row = mysql_fetch_array($result)){
@@ -50,7 +49,7 @@ class dtCompany{
 		$con = new dtConexion;
 		if($con->conectar()==true){
 
-			$query = "DELETE FROM company WHERE idCom=".$id;
+			$query = "CALL sp_EliminarCompany($id)";
 			$result = @mysql_query($query);
 
 			if (!$result){
@@ -68,7 +67,7 @@ class dtCompany{
 
 		if($con->conectar()==true){
 
-			$query = "SELECT * FROM company WHERE idCom = ".$id;
+			$query = "CALL sp_consultaCompany($id)";
 			$result = @mysql_query($query);
 
 			if($row = mysql_fetch_array($result)){
@@ -86,12 +85,11 @@ class dtCompany{
 	function modificar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "UPDATE company SET
-			nameCom = '".$micompany->getnameCom()."',
-			addressCom='".$micompany->getaddressCom()."',
-			phoneCom='".$micompany->getphoneCom()."',
-			emailCom='".$micompany->getemailCom()."'
-			WHERE idCom = ".$micompany->getidCom()."";
+			$query = "CALL sp_modificarCompany(".$micompany->getidCom().",
+						'".$micompany->getnameCom()."',
+						'".$micompany->getaddressCom()."',
+						'".$micompany->getphoneCom()."',
+							'".$micompany->getemailCom()."')";
 				//echo "$query";
 			$result = @mysql_query($query);
 			if (!$micompany){

@@ -18,32 +18,31 @@
 	  <div class="panel-body">
 
 
-         <p> <label for="">usuario : </label>
+         <p> <label for="">Nombre Usuario : </label>
          	<br/>
 		<input type="text" class="form-control" id="username" name="username" placeholder="" />	</p>
         
-        <p> <label for="">contraseña : </label>
+        <p> <label for="">Contraseña : </label>
 			<br/>
 		<input type="text" class="form-control" id="password" name="password" placeholder="" />	</p>
 		
-		<p> <label for="">fname : </label>
+		<p> <label for="">Nombre : </label>
 			<br/>
 		<input type="text" class="form-control" id="fname" name="fname" placeholder="" />	</p>
 		
-		<p> <label for="">lname : </label>
+		<p> <label for="">Apellido : </label>
 			<br/>
 		<input type="text" class="form-control" id="lname" name="lname" placeholder=""/></p>
 
-		<p> <label for="">telefono : </label>
+		<p> <label for="">Telefono : </label>
 			<br/>
 		<input type="text" class="form-control" id="phone" name="phone" placeholder=""/></p>
 
-
-		<p> <label for="">celular : </label>
+		<p> <label for="">Número Celular : </label>
 			<br/>
-		<input type="text" class="form-control" id="email" name="email" placeholder=""/></p>
+		<input type="text" class="form-control" id="n_cel" name="n_cel" placeholder=""/></p>
 
-		<p> <label for="">email : </label>
+		<p> <label for="">Email : </label>
 			<br/>
 		<input type="text" class="form-control" id="email" name="email" placeholder=""/></p>
 

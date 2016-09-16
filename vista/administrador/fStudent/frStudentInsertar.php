@@ -18,31 +18,31 @@
 	  <div class="panel-body">
 
 
-         <p> <label for="">Código Estudiante: </label>
+         <p> <label for="">Carnet: </label>
          	<br/>
 		<input type="text" class="form-control" id="carnet" name="carnet" placeholder="AR-001" />	</p>
         
-        <p> <label for="">Nombre Estudiante: </label>
+        <p> <label for="">Nombre: </label>
 			<br/>
 		<input type="text" class="form-control" id="nameStu" name="nameStu" placeholder="" />	</p>
 		
-		<p> <label for="">Apellido Estudiante: </label>
+		<p> <label for="">Apellido: </label>
 			<br/>
 		<input type="text" class="form-control" id="lnameStu" name="lnameStu" placeholder="" />	</p>
 		
-		<p> <label for="">Cedula Estudiante: </label>
+		<p> <label for="">Cedula: </label>
 			<br/>
 		<input type="text" class="form-control" id="cedula" name="cedula" placeholder=""/></p>
 
-		<p> <label for="">Carrera Estudiante: </label>
+		<p> <label for="">Carrera: </label>
 			<br/>
 		<input type="text" class="form-control" id="carrera" name="carrera" placeholder=""/></p>
 
-		<p> <label for="">Telefono Estudiante: </label>
+		<p> <label for="">Telefono : </label>
 			<br/>
 		<input type="text" class="form-control" id="phone" name="phone" placeholder=""/></p>
 
-		<p> <label for="">Dob Estudiante: </label>
+		<p> <label for="">Fecha de Nacimiento: </label>
 			<br/>
 		<input type="text" class="form-control" id="dob" name="dob" placeholder=""/></p>
 

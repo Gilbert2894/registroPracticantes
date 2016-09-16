@@ -27,7 +27,7 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 
       <form class="form-inline" id="frCompanyModificar" method="POST">
         
-		<p> <label for="">Nombre Company: </label>
+		<p> <label for="">Nombre: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="nameCom" name="nameCom"
 			value=<?php echo "\"".$company->getnameCom()."\"";?>/> </p>

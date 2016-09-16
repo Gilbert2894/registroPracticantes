@@ -35,12 +35,12 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 		<p> <label for="">contraseña: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="password" name="password"
-			value=<?php echo "\"".$users->getpassword()."\"";?>/> </p>
+			value=""/> </p>
 
 		<p> <label for="">fname: </label>
 			<br/>
 		<input class="form-control" class="form-control" type="text" id="fname" name="fname"
-			value=<?php echo "\"".$users->getfnameCom()."\"";?>/> </p>
+			value=<?php echo "\"".$users->getfname()."\"";?>/> </p>
 
 		<p> <label for="">lname: </label>
 			<br/>

@@ -15,6 +15,13 @@ class company{
 		$this->setemailCom($emailCom);
 	
 	}
+	function companys( $nameCom, $addressCom, $phoneCom, $emailCom){
+		$this->setnameCom($nameCom);
+		$this->setaddressCom($addressCom);
+		$this->setphoneCom($phoneCom);
+		$this->setemailCom($emailCom);
+	
+	}
 
 	public function setidCom($idCom) {
 		$this->idCom = $idCom;

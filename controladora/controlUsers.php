@@ -11,25 +11,23 @@
 	
 		function insertar(){
 		
-			
-			
-			$id= $_POST['id'];
 			$username= $_POST['username'];
 			$password= $_POST['password'];
 			$fname= $_POST['fname'];
 			$lname= $_POST['lname'];
 			$phone= $_POST['phone'];
-			$cellphone= $_POST['cellphone'];
+			$cellphone= $_POST['n_cel'];
 			$email= $_POST['email'];
+			$encriptada =sha1($password);
 			
-			$users = new users($id, $username, $password, $fname, $lname, $phone, $cellphone, $email);			
+			$users = new users(0,$username, $encriptada, $fname, $lname, $phone, $cellphone, $email);			
 						
 			$dtusers = new dtusers;
 			
 			if($dtusers->insertar($users)==true){	
 				echo "<div class='alert alert-success' role='alert'>Registro grabado correctamente</div>";	
 			}else{
-				echo "</p>Error al guardar ".$id."</p><br>";
+				echo "</p>Error al guardar ".$username."</p><br>";
 			}
 		}
 		
@@ -43,8 +41,9 @@
 			$phone= $_POST['phone'];
 			$cellphone= $_POST['cellphone'];
 			$email= $_POST['email'];
+			$encriptada =sha1($password);
 			
-			$users = new users($id, $username, $password, $fname, $lname, $phone, $cellphone, $email);
+			$users = new users($id, $username, $encriptada, $fname, $lname, $phone, $cellphone, $email);
 			
 			
 			

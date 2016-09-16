@@ -7,14 +7,15 @@ class dtstudent{
 	function insertar($miStudent){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "INSERT INTO student(carnet, nameStu, lnameStu, cedula, carrera, phone, dob)
-					VALUES (".$miStudent->getcarnet().",
+			$query = "CALL sp_insertarStudent(".$miStudent->getcarnet().",
 						'".$miStudent->getnameStu()."',
 						'".$miStudent->getlnameStu()."',
 						'".$miStudent->getcedula()."',
 						'".$miStudent->getcarrera()."', 
 						'".$miStudent->getphone()."',
 						'".$miStudent->getdob()."')";
+
+			
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){
@@ -32,7 +33,7 @@ class dtstudent{
 
 		if($con->conectar()==true){
 
-			$query = "SELECT * FROM student";
+			$query = "CALL sp_consultasStudent()";
 			$result = @mysql_query($query);
 			//echo "$query";
 			while($row = mysql_fetch_array($result)){
@@ -53,7 +54,7 @@ class dtstudent{
 		$con = new dtConexion;
 		if($con->conectar()==true){
 
-			$query = "DELETE FROM student WHERE carnet=".$id;
+			$query = "CALL sp_eliminarStudent($id)";
 			$result = @mysql_query($query);
 
 			if (!$result){
@@ -71,7 +72,7 @@ class dtstudent{
 
 		if($con->conectar()==true){
 
-			$query = "SELECT * FROM student WHERE carnet = ".$id;
+			$query = "CALL sp_consultaStudent($id)";
 			$result = @mysql_query($query);
 
 			if($row = mysql_fetch_array($result)){
@@ -89,14 +90,13 @@ class dtstudent{
 	function modificar($miStudent){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "UPDATE student SET
-			nameStu = '".$miStudent->getnameStu()."',
-			lnameStu='".$miStudent->getlnameStu()."',
-			cedula='".$miStudent->getcedula()."',
-			carrera='".$miStudent->getcarrera()."',
-			phone='".$miStudent->getphone()."',
-			dob='".$miStudent->getdob()."'
-			WHERE carnet = ".$miStudent->getcarnet()."";
+			$query = "CALL sp_modificarStudent(".$miStudent->getcarnet().",
+						'".$miStudent->getnameStu()."',
+						'".$miStudent->getlnameStu()."',
+						'".$miStudent->getcedula()."',
+						'".$miStudent->getcarrera()."', 
+						'".$miStudent->getphone()."',
+						'".$miStudent->getdob()."')";
 				//echo "$query";
 			$result = @mysql_query($query);
 			if (!$miStudent){

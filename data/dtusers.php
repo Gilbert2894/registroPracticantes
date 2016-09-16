@@ -7,9 +7,7 @@ class dtusers{
 	function insertar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "INSERT INTO users(id, username, password, fname, lname, phone, cellphone, email)
-					VALUES (".$micompany->getid().",
-						'".$micompany->getusername()."',
+			$query = "CALL sp_insertarUsers('".$micompany->getusername()."',
 						'".$micompany->getpassword()."',
 						'".$micompany->getfname()."',
 						'".$micompany->getlname()."', 
@@ -33,12 +31,12 @@ class dtusers{
 
 		if($con->conectar()==true){
 
-			$query = "SELECT * FROM users";
+			$query = "CALL sp_consultasUsers()";
 			$result = @mysql_query($query);
 			//echo "$query";
 			while($row = mysql_fetch_array($result)){
 
-	 			$micompany = new users( $row[0], $row[1], $row[2] , $row[3], $row[4], $row[5], $row[6], $row[7]);	
+	 			$micompany = new users( $row[0], $row[1] , $row[3], $row[4], $row[5], $row[6], $row[7]);	
 				array_push($lista, $micompany);
 			}
 			if (!$lista){
@@ -54,7 +52,7 @@ class dtusers{
 		$con = new dtConexion;
 		if($con->conectar()==true){
 
-			$query = "DELETE FROM users WHERE id=".$id;
+			$query = "CALL sp_eliminarUsers($id)";
 			$result = @mysql_query($query);
 
 			if (!$result){
@@ -72,11 +70,11 @@ class dtusers{
 
 		if($con->conectar()==true){
 
-			$query = "SELECT * FROM users WHERE id = ".$id;
+			$query = "CALL sp_consultaUsers($id)";
 			$result = @mysql_query($query);
 
 			if($row = mysql_fetch_array($result)){
-	 			$micompany = new users( $row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7]);
+	 			$micompany = new users( $row[0], $row[1],$row[2], $row[3], $row[4], $row[5], $row[6], $row[7]);
 
 			}
 			if (!$micompany){
@@ -90,15 +88,14 @@ class dtusers{
 	function modificar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "UPDATE users SET
-			username = '".$micompany->getusername()."',
-			password='".$micompany->getpassword()."',
-			fname='".$micompany->getfname()."',
-			lname='".$micompany->getlname()."',
-			phone='".$micompany->getphone()."',
-			cellphone='".$micompany->getcellphone()."',
-			email='".$micompany->getemail()."'
-			WHERE id = ".$micompany->getid()."";
+			$query = "CALL sp_modificarUsers(".$micompany->getid().",
+						'".$micompany->getusername()."',
+						'".$micompany->getpassword()."',
+						'".$micompany->getfname()."',
+						'".$micompany->getlname()."',
+						'".$micompany->getphone()."',
+						'".$micompany->getcellphone()."',
+							'".$micompany->getemail()."')";
 				//echo "$query";
 			$result = @mysql_query($query);
 			if (!$micompany){
