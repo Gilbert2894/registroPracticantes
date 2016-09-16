@@ -92,7 +92,7 @@ class dtusers{
 		if($con->conectar()==true){
 			$query = "UPDATE users SET
 			username = '".$micompany->getusername()."',
-			password='".$micompany->getpassword()."'
+			password='".$micompany->getpassword()."',
 			fname='".$micompany->getfname()."',
 			lname='".$micompany->getlname()."',
 			phone='".$micompany->getphone()."',

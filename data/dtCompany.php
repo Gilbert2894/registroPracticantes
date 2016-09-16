@@ -7,12 +7,11 @@ class dtCompany{
 	function insertar($micompany){
 		$con = new dtConexion;
 		if($con->conectar()==true){
-			$query = "INSERT INTO company(idCom, nameCom, addressCom, phoneCom, emailCom)
-					VALUES (".$micompany->getidCom().",
+			$query = "CALL sp_insertarCompany(".$micompany->getidCom().",
 						'".$micompany->getnameCom()."',
 						'".$micompany->getaddressCom()."',
 						'".$micompany->getphoneCom()."',
-							'".$micompany->getemailCom()."' )";
+							'".$micompany->getemailCom()."')";
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){

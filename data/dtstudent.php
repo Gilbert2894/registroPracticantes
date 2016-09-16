@@ -91,7 +91,7 @@ class dtstudent{
 		if($con->conectar()==true){
 			$query = "UPDATE student SET
 			nameStu = '".$miStudent->getnameStu()."',
-			lnameStu='".$miStudent->getlnameStu()."'
+			lnameStu='".$miStudent->getlnameStu()."',
 			cedula='".$miStudent->getcedula()."',
 			carrera='".$miStudent->getcarrera()."',
 			phone='".$miStudent->getphone()."',
