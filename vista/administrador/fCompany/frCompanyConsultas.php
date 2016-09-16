@@ -5,21 +5,28 @@
 	$control = new controlObtenerCompany;
 	$lista =$control->obtenerCompanys();
 ?>
-<div class="container">
-	<h1>Información de Empresas</h1>
+<div class="row">
+    <div class="col-md-12">
+    	<div class="portlet light bordered">
+    		<div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold uppercase"> Empresas</span>
+                </div>
+            </div>
 <div class="table-responsive">
-	<table class="table table-bordered table table-hover">
+	<table class="table table-striped table-bordered table-hover table-checkable order-column">
 		<tr>		
-			<th><p>código</p></th>		
-			<th><p>nombre</p></th>		
-			<th><p>dirección</p></th>
-			<th><p>telefono</p></th>
-			<th><p>email</p></th>		
-			<th colspan="2"><p>Opciones</p></th>
+			<th>Código</th>		
+			<th>Nombre</th>		
+			<th>Dirección</th>
+			<th>Telefono</th>
+			<th>Email</th>		
+			<th colspan="2">Opciones</th>
 		</tr>
 		<?php 
 			if (!$lista) {
-				echo "No hay empresas registrada";
+				echo "No hay empresas registradas";
 			} else {
 				foreach ($lista as $company){
 					echo "<tr>";
@@ -45,6 +52,8 @@
 		?>
 	</table>
 	</div>		
+</div>	
+</div>	
 </div>	
 
 		

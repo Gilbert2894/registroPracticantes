@@ -5,23 +5,30 @@
 	$control = new controlObtenerStudent;
 	$lista =$control->obtenerStudents();
 ?>
-<div class="container">
-	<h1>Estudiante</h1>
+<div class="row">
+    <div class="col-md-12">
+    	<div class="portlet light bordered">
+    		<div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold uppercase"> Estudiantes</span>
+                </div>
+            </div>
 <div class="table-responsive">
-	<table class="table table-bordered table table-hover">
+	<table class="table table-striped table-bordered table-hover table-checkable order-column">
 		<tr>		
-			<th><p>carnet</p></th>		
-			<th><p>nombre</p></th>		
-			<th><p>apellido</p></th>
-			<th><p>cedula</p></th>
-			<th><p>carrera</p></th>
-			<th><p>Telefono</p></th>
-			<th><p>dob</p></th>	
-			<th colspan="2"><p>Opciones</p></th>
+			<th>Carnet</th>		
+			<th>Nombre</th>		
+			<th>Apellido</th>
+			<th>Cedula</th>
+			<th>Carrera</th>
+			<th>Telefono</th>
+			<th>Fecha Nacimiento</th>	
+			<th colspan="2">Opciones</th>
 		</tr>
 		<?php 
 			if (!$lista) {
-				echo "No hay empresas registrada";
+				echo "No hay estudiantes registrada";
 			} else {
 				foreach ($lista as $student){
 					echo "<tr>";
@@ -50,5 +57,6 @@
 	</table>
 	</div>		
 </div>	
-
+</div>	
+</div>	
 		

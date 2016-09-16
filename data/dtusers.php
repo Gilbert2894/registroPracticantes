@@ -4,17 +4,17 @@ class dtusers{
 	function dtusers(){
 	}
 
-	function insertar($micompany){
+	function insertar($user){
 		$con = new dtConexion;
 		if($con->conectar()==true){
 			$query = "INSERT INTO users(username, password, fname, lname, phone, cellphone, email)
-					VALUES ('".$micompany->getusername()."',
-						'".$micompany->getpassword()."',
-						'".$micompany->getfname()."',
-						'".$micompany->getlname()."', 
-						'".$micompany->getphone()."',
-						'".$micompany->getcellphone()."',
-						'".$micompany->getemail()."')";
+					VALUES ('".$user->getusername()."',
+						'".$user->getpassword()."',
+						'".$user->getfname()."',
+						'".$user->getlname()."', 
+						'".$user->getphone()."',
+						'".$user->getcellphone()."',
+						'".$user->getemail()."')";
 			$result = @mysql_query($query);
 			//echo "$query";
 			if (!$result){

@@ -5,20 +5,27 @@
 	$control = new controlObtenerCompany_student;
 	$lista =$control->obtenerCompany_students();
 ?>
-<div class="container">
-	<h1>Información de Estudiantes Empresa</h1>
+<div class="row">
+    <div class="col-md-12">
+    	<div class="portlet light bordered">
+    		<div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold uppercase"> Estudiantes</span>
+                </div>
+            </div>
 <div class="table-responsive">
-	<table class="table table-bordered table table-hover">
+	<table class="table table-striped table-bordered table-hover table-checkable order-column">
 		<tr>		
-			<th><p>id</p></th>		
-			<th><p>carnet</p></th>		
-			<th><p>id empresa</p></th>
-			<th><p>id usuario</p></th>	
-			<th colspan="2"><p>Opciones</p></th>
+			<th>Id</th>		
+			<th>Estudiante</th>		
+			<th>Empresa</th>
+			<th>Encargado</th>	
+			<th colspan="2">Opciones</th>
 		</tr>
 		<?php 
 			if (!$lista) {
-				echo "No hay Empresa estudiantes registrada";
+				echo "No hay Estudiantes registrada";
 			} else {
 				foreach ($lista as $company_student){
 					echo "<tr>";
@@ -43,6 +50,8 @@
 		?>
 	</table>
 	</div>		
+</div>	
+</div>	
 </div>	
 
 		

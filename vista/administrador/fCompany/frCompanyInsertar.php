@@ -3,14 +3,8 @@
 	<form class="form-inline" id="frCompanyInsertar" method="POST">
 		<div class="container">
 
-        <div class="row">
+<div class="row">
   <div class="col-md-4">
-  	
-
-  </div>
-
-  <div class="col-md-4">
-
   	<div class="panel panel-default panel panel-mio">
 	  <div class="panel-heading ">
 	    <h1 class="panel-title">Ingresar Empresa</h1>
