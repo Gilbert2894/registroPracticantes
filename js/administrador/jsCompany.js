@@ -135,7 +135,7 @@ function eliminarCompany(idCom){
             $('#contenedorMensaje').html(data);
             $('#contenedorFormulario').html("");
             if (data=="true") {
-                bootbox.alert("Se elimino correctament");
+                bootbox.alert("Se elimino correctamente");
             }else{
 
                 bootbox.alert("Error al eliminar");

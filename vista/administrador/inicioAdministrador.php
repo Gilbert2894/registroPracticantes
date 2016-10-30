@@ -86,7 +86,7 @@
 
           
           <br/>
-          <a class="btn green pull-right" href="./recuperar.php">Recuperar Contraseña</a><br/>
+          <!--<a class="btn green pull-right" href="./recuperar.php">Recuperar Contraseña</a><br/>
 
           <!--<a class="btn btn-lg btn-primary btn-block" id="link" onclick="recuperarContrasenia()">Recuperar contraseña</a>-->
       </form>
